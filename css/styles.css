@@ -4,13 +4,13 @@
     width: 100%;
 }
 
-.wrapper button{
+input[type="submit"]{
     display: block;
     margin: 10px  auto;
 }
 
-.wrapper input{
-    margin: 30px auto 0;
+input[type="url"]{
+    margin: 30px auto 10px;
     display: block;
     width: 270px;
 }
