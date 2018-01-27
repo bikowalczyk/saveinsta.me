@@ -22,7 +22,7 @@ let link = $("input[type='url']").val();
                 
                 
                 
-                 location.reload(false); //resets app 
+                location.reload(false); //resets app 
                }
 
            }
