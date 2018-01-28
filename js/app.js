@@ -36,6 +36,8 @@ let link = $("input[type='url']").val();
         alert("The link you pasted doesn't seem to be a valid instagram post link");
         }
 
+        location.reload(false); //resets app 
+
     });
 
 
