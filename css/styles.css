@@ -52,6 +52,13 @@ input[type="url"]{
     text-align: center;
 }
 
+.how-link{
+    display: block;
+    margin: 100px;
+    text-align: center;
+    text-decoration: none;
+}
+
 /* Ajax animation */
 .modal{
     display: none;
