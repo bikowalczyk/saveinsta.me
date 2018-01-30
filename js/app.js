@@ -34,9 +34,10 @@ let link = $("input[type='url']").val();
         else{               //the error message if not valid link
             
         alert("The link you pasted doesn't seem to be a valid instagram post link");
+        location.reload(false); //resets app 
         }
 
-        location.reload(false); //resets app 
+        
 
     });
 
