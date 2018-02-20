@@ -1,5 +1,14 @@
 const button =  $('.link');  
 
+//binding enter press to clicking a button
+$('#addLink').keypress(function(e) {
+    if(e.which == 13) {
+        e.preventDefault();
+        button[0].click();
+    }
+});
+
+
 $(button).click(function(e){
     e.preventDefault();
 
