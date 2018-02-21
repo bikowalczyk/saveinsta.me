@@ -11,32 +11,36 @@ $('#addLink').keypress(function(e) {
 
 $(button).click(function(e){
     e.preventDefault();
-
 let link = $("input[type='url']").val();
+const embed = "https://api.instagram.com/oembed?url=" + link;
+
+//main functions
+
+function getInstaPhoto(){
+    $.ajax({
+        type: 'GET',
+        url: embed,
+        cache: false,
+        dataType: 'jsonp',
+        success: function(data){
+         button.attr('href', data.thumbnail_url);
+         button.attr('target', "_blank");
+         button.off();
+         button[0].click();
+         
+         
+         
+         location.reload(false); //resets app 
+        }
+
+    }
+ 
+ )}
 
         if(link.startsWith("https://www.instagram.com/p/" || link.startsWith("https://scontent"))){
-           const embed = "https://api.instagram.com/oembed?url=" + link;
            
-           $.ajax({
-               type: 'GET',
-               url: embed,
-               cache: false,
-               dataType: 'jsonp',
-               success: function(data){
-                console.log(data.thumbnail_url);
-                button.attr('href', data.thumbnail_url);
-                button.attr('target', "_blank");
-                button.off();
-                button[0].click();
-                
-                
-                
-                location.reload(false); //resets app 
-               }
-
-           }
-        
-        );
+           getInstaPhoto();
+         
 
         }
         
