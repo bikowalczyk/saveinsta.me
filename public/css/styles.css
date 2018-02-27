@@ -28,11 +28,15 @@ input[type="url"]{
 }
 
 .logo{
-    height: auto;
+    
     width: auto;
-    max-height: 40vh;
+    height: 300px;
     display: block;
     margin: 0 auto 40px;
+}
+
+.form{
+    margin-top: 8vh;
 }
 
 .primary-main{
@@ -54,7 +58,6 @@ input[type="url"]{
 
 .how-link{
     display: block;
-    margin: 100px;
     text-align: center;
     text-decoration: none;
 }
