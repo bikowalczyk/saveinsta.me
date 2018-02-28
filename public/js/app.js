@@ -8,20 +8,21 @@ $('#addLink').keypress(function(e) {
     }
 });
 
+function download(value){
+    button.attr('href', value);
+    button.attr('target', "_blank");
+    button.off();
+    button[0].click();
+    $("input[type='url']").val(""); 
+    // button.attr('href', "");
+    location.reload(false);  //to be fixed later
+    // return;
+   }
 
 $(button).click(function(e){
     e.preventDefault();
 let link = $("input[type='url']").val();
-const embed = "https://api.instagram.com/oembed?url=" + link;
 
-function download(value){
-    button.attr('href', value);
-         button.attr('target', "_blank");
-         button.off();
-         button[0].click();
-         $("input[type='url']").val(""); 
-         return;
-   }
 
         if(link.startsWith("https://www.instagram.com/p/" || link.startsWith("https://scontent"))){
            

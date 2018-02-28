@@ -10,7 +10,7 @@
     
     
 }
-.link:visited{
+a:visited{
     color: black;
 }
 
@@ -60,6 +60,10 @@ input[type="url"]{
     display: block;
     text-align: center;
     text-decoration: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
 }
 
 /* Ajax animation */
