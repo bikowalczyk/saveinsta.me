@@ -14,32 +14,34 @@ $(button).click(function(e){
 let link = $("input[type='url']").val();
 const embed = "https://api.instagram.com/oembed?url=" + link;
 
-//main functions
-
-function getInstaPhoto(){
-    $.ajax({
-        type: 'GET',
-        url: embed,
-        cache: false,
-        dataType: 'jsonp',
-        success: function(data){
-         button.attr('href', data.thumbnail_url);
+function download(value){
+    button.attr('href', value);
          button.attr('target', "_blank");
          button.off();
          button[0].click();
-         
-         
-         
          location.reload(false); //resets app 
-        }
-
-    }
- 
- )}
+   }
 
         if(link.startsWith("https://www.instagram.com/p/" || link.startsWith("https://scontent"))){
            
-           getInstaPhoto();
+            $.ajax({
+                type: 'GET',
+                url: link,
+                cache: false,
+                success: function(response){
+                 const regex = /<meta property="og:video".*?content="(.*?)"/;       //a bit of a hassle with correct RegExp
+                 const regex1 = /<meta property="og:image".*?content="(.*?)"/;
+                 
+                if(regex.test(response)){
+                    let src = response.match(regex)[1]; 
+                    download(src);
+
+                }else{
+                    let src = response.match(regex1)[1];
+                    download(src);
+                }
+
+                }});
          
 
         }
