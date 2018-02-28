@@ -19,7 +19,7 @@ function download(value){
          button.attr('target', "_blank");
          button.off();
          button[0].click();
-         location.reload(false); //resets app 
+         link(''); 
    }
 
         if(link.startsWith("https://www.instagram.com/p/" || link.startsWith("https://scontent"))){
