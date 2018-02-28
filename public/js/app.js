@@ -19,7 +19,8 @@ function download(value){
          button.attr('target', "_blank");
          button.off();
          button[0].click();
-         link(''); 
+         $("input[type='url']").val(""); 
+         return;
    }
 
         if(link.startsWith("https://www.instagram.com/p/" || link.startsWith("https://scontent"))){
