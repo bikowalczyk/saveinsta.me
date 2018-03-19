@@ -2,40 +2,30 @@
 <html>
   <head>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
-    <title>Saveinsta.me</title>
+    <title>SaveInsta</title>
   </head>
   <body>
-      
-       
-       <img class="logo" src="img/logo.jpg" alt="main_picture">
-        
-       <div class="text">
-         
-        <h1 class="primary">
 
-          <span class="primary-main">SaveInsta.me</span>
-          <span class="primary-sub"> A simple way to save instagram posts</span>
+      <img class="img__logo" src="img/ig_logo.svg">
+      <h1 class="header__main--text">SaveInsta</h1>
 
-        </h1>
-        
-      </div>
+      <form class="form" action="" method="get">
 
-      <form class="form" action="" method="get" >
-          <input id="addLink" type="url" required minlength="6" placeholder="Paste a link!">
-          <button type="submit"><a class="link" href="" download target="">Download</a></button>
-      </form>
-      
-      <a class="how-link" href="">How does it work?</a>
-      
-      
-
-      <div class="modal"></div>
+        <input class="form__input"
+         type="text" 
+         placeholder="Paste a link"
+         title="Paste a valid Ig link" 
+         pattern="^https://www.instagram.com/p/.*"
+         autocomplete="off"
+         >
+        <a class="form__btn" href="" download>Submit</a>
+        </form>
   </body>
 
   <script src="js/app.js"></script>

@@ -1,10 +1,11 @@
 {
-  "name": "node-js-sample",
+  "name": "saveinsta",
   "version": "0.2.0",
   "description": "A sample Node.js app using Express 4",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "compile:sass":"node-sass public/styles/main.scss public/styles/styles.css -w"
   },
   "dependencies": {
     "express": "^4.13.3"
@@ -14,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-sample"
+    "url": "git+https://github.com/heroku/node-js-sample.git"
   },
   "keywords": [
     "node",
@@ -25,5 +26,12 @@
   "contributors": [
     "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heroku/node-js-sample/issues"
+  },
+  "homepage": "https://github.com/heroku/node-js-sample#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
 }

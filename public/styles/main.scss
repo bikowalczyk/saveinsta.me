@@ -1,0 +1,63 @@
+$color-primary: rgba(169, 238, 230, 0.8);
+$color-dark: #625772;
+$color-secondary: #FEFAEC;
+$color-red: #F38181;
+
+%border{
+    display: block;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+}
+
+body{
+    background-color: $color-primary; 
+    margin: 0 auto;
+}
+
+.img__logo{
+    display: block;
+    height: 8.25rem;
+    width: 8.25rem;
+    margin: 7.31rem auto 1rem;
+}
+
+.header__main--text{
+    font-family: Arial;
+    color: $color-dark;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.form{
+    &__input{
+        @extend %border;
+        height: 2.625rem;
+        width: 18.25rem;
+        margin: 0 auto;
+        text-align: center;
+        color: $color-dark;
+        // background-color: $color-secondary;
+        
+    &:invalid{
+        border: 1.5px solid $color-red;
+
+    &::placeholder{
+        color: $color-red;
+    }
+
+    }
+    }
+    &__btn{
+        @extend %border;
+        height: 3.125rem;
+        width: 12.51rem;
+        margin: 1.75rem auto;
+        background-color: $color-red;
+        color: $color-secondary;
+        text-align: center;
+        text-decoration: none;
+        line-height: 3.125rem;
+        
+    }
+}

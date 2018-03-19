@@ -1,7 +1,7 @@
-const button =  $('.link');  
+const button =  $('.form__btn');
 
 //binding enter press to clicking a button
-$('#addLink').keypress(function(e) {
+$('.form__input').keypress(function(e) {
     if(e.which == 13) {
         e.preventDefault();
         button[0].click();
@@ -13,15 +13,15 @@ function download(value){
     button.attr('target', "_blank");
     button.off();
     button[0].click();
-    $("input[type='url']").val(""); 
+    $(".form__input").val(""); 
     // button.attr('href', "");
-    location.reload(false);  //to be fixed later
+     location.reload(false);  //to be fixed later
     // return;
    }
 
 $(button).click(function(e){
     e.preventDefault();
-let link = $("input[type='url']").val();
+    let link = $(".form__input").val();
 
 
         if(link.startsWith("https://www.instagram.com/p/" || link.startsWith("https://scontent"))){
@@ -35,7 +35,7 @@ let link = $("input[type='url']").val();
                  const regex1 = /<meta property="og:image".*?content="(.*?)"/;
                  
                 if(regex.test(response)){
-                    let src = response.match(regex)[1]; 
+                    let src = response.match(regex)[1];
                     download(src);
 
                 }else{
@@ -49,18 +49,8 @@ let link = $("input[type='url']").val();
         }
         
         else{               //the error message if not valid link
-            
-        alert("The link you pasted doesn't seem to be a valid instagram post link");
-        location.reload(false); //resets app 
         }
 
         
 
     });
-
-
-//ajax animation:
-$(document).on({
-    ajaxStart: function() { $('body').addClass("loading");},
-     ajaxStop: function() { $('body').removeClass("loading"); }    
-});
