@@ -27,9 +27,8 @@ body {
   text-align: center;
   color: #625772; }
   .form__input:invalid {
-    border: 1.5px solid #F38181; }
-    .form__input:invalid::placeholder {
-      color: #F38181; }
+    border: 1.5px solid #F38181;
+    color: #F38181; }
 
 .form__btn {
   height: 3.125rem;
@@ -39,4 +38,5 @@ body {
   color: #FEFAEC;
   text-align: center;
   text-decoration: none;
-  line-height: 3.125rem; }
+  line-height: 3.125rem;
+  font-size: 1.125rem; }

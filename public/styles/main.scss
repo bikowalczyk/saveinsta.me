@@ -41,11 +41,8 @@ body{
         
     &:invalid{
         border: 1.5px solid $color-red;
-
-    &::placeholder{
         color: $color-red;
-    }
-
+        
     }
     }
     &__btn{
@@ -58,6 +55,7 @@ body{
         text-align: center;
         text-decoration: none;
         line-height: 3.125rem;
+        font-size: 1.125rem;
         
     }
 }

@@ -24,7 +24,7 @@ $(button).click(function(e){
     let link = $(".form__input").val();
 
 
-        if(link.startsWith("https://www.instagram.com/p/" || link.startsWith("https://scontent"))){
+        if(link.startsWith("https://www.instagram.com/p/") || link.startsWith("https://scontent")){
            
             $.ajax({
                 type: 'GET',
@@ -44,11 +44,14 @@ $(button).click(function(e){
                 }
 
                 }});
-         
-
+                
         }
         
         else{               //the error message if not valid link
+            $(".form__input").addClass("animated flash");
+            setTimeout(()=>{ 
+            $("input").removeClass("animated flash");
+             }, 1500);
         }
 
         
