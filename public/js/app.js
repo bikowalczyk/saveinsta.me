@@ -36,7 +36,7 @@ $(button).click(function(e){
                  
                 if(regex.test(response)){
                     let src = response.match(regex)[1];
-                    download(src);
+                    
 
                 }else{
                     let src = response.match(regex1)[1];
@@ -53,7 +53,4 @@ $(button).click(function(e){
             $("input").removeClass("animated flash");
              }, 1500);
         }
-
-        
-
     });

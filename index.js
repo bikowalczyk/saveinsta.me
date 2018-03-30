@@ -1,6 +1,10 @@
 var express = require('express')
 var app = express()
 
+var fs = require('fs');
+var gifify = require('gifify');
+var path = require('path');
+
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 

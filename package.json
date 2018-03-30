@@ -5,10 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "compile:sass":"node-sass public/styles/main.scss public/styles/styles.css -w"
+    "compile:sass": "node-sass public/styles/main.scss public/styles/styles.css -w"
   },
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "ffmpeg": "0.0.4",
+    "file-system": "^2.2.2",
+    "giflossy": "^3.0.41"
   },
   "engines": {
     "node": "4.0.0"
