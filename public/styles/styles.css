@@ -39,4 +39,11 @@ body {
   text-align: center;
   text-decoration: none;
   line-height: 3.125rem;
-  font-size: 1.125rem; }
+  font-size: 1.125rem;
+  display: block; }
+
+.download__choice {
+  display: none;
+  margin: 1.75rem auto;
+  justify-content: space-evenly;
+  width: 18.25rem; }

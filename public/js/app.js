@@ -8,11 +8,9 @@ $('.form__input').keypress(function(e) {
     }
 });
 
-function download(value){
-    button.attr('href', value);
-    button.attr('target', "_blank");
-    button.off();
-    button[0].click();
+function download(value, item){
+    $(item).attr('href', value);
+    $(item).attr('target', "_blank");
     $(".form__input").val(""); 
     // button.attr('href', "");
      location.reload(false);  //to be fixed later
@@ -36,18 +34,34 @@ $(button).click(function(e){
                  
                 if(regex.test(response)){
                     let src = response.match(regex)[1];
-                    
+                    $(".form__btn").hide();
+                    $(".download__choice").css('display','flex');
+                    //user chose video
+                    $('.download__choice-video').click(e=>{
+                        e.preventDefault;
+                        $.ajax({ 
+                            type: 'GET', 
+                            url: '/video', 
+                            data: {url: src}, 
+                            dataType: 'json',
+                            success: function (res) { 
+                            console.log(res);
+                            }
+                          });
+                        
+                    })
+
 
                 }else{
                     let src = response.match(regex1)[1];
-                    download(src);
+                    download(src, button);
                 }
 
                 }});
                 
         }
         
-        else{               //the error message if not valid link
+        else{               //the error message if link isn't valid
             $(".form__input").addClass("animated flash");
             setTimeout(()=>{ 
             $("input").removeClass("animated flash");
