@@ -4,7 +4,7 @@ var app = express()
 var fs = require('fs');
 var http = require('http');
 var request = require('request');
-// var gifify = require('gifify');
+var gifify = require('gifify');
 var path = require('path');
 
 app.set('port', (process.env.PORT || 5000))
