@@ -8,8 +8,8 @@ $('.form__input').keypress(function(e) {
     }
 });
 
-function download(value, item){
-    $(item).attr('href', `/down?url=${value}`);
+function download(value, item, type){
+    $(item).attr('href', `${type}?url=${value}`);
     $(item).attr('target', "_blank");
     $(".form__input").val("");
     // button.attr('href', "");
@@ -35,12 +35,15 @@ $(button).click(function(e){
                     let src = response.match(regex)[1];
                     $(".form__btn").hide();
                     $(".download__choice").css('display','flex');
+                    
                     //user chose video
-                    $('.download__choice-video').click(()=>{
-                        download(encodeURIComponent(src), ('#video'));
+                        $('.download__choice-video').click(()=>{
+                            download(encodeURIComponent(src), ('#video'),'/down');
                     });
                     //user chose gif
-
+                        $('.download__choice-gif').click(()=>{ 
+                            download(encodeURIComponent(src), ('#gif'),'/gif');
+                        });
 
                 }else{
                     let src = response.match(regex1)[1];
