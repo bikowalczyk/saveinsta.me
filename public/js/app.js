@@ -10,11 +10,11 @@ $('.form__input').keypress(function(e) {
 
 function download(value, item, type){
     $(item).attr('href', `${type}?url=${value}`);
-    $(item).attr('target', "_blank");
     $(".form__input").val("");
-    // button.attr('href', "");
-    location.reload(false);  //to be fixed later
-    // return;
+    // button[0].click();
+    // $(item).attr('href', "#");
+    $('.form__input').prop('disabled', false);
+    
    }
 
 $(button).click(function(e){
@@ -22,7 +22,7 @@ $(button).click(function(e){
 
 
         if(link.startsWith("https://www.instagram.com/p/") || link.startsWith("https://scontent")){
-           
+            $('.form__input').prop('disabled', true);
             $.ajax({
                 type: 'GET',
                 url: link,
@@ -39,6 +39,8 @@ $(button).click(function(e){
                     //user chose video
                         $('.download__choice-video').click(()=>{
                             download(encodeURIComponent(src), ('#video'),'/down');
+                            $(".download__choice").hide();
+                            $(".form__btn").css('display','block');
                     });
                     //user chose gif
                         $('.download__choice-gif').click(()=>{ 
@@ -47,7 +49,8 @@ $(button).click(function(e){
 
                 }else{
                     let src = response.match(regex1)[1];
-                    download(encodeURIComponent(src), ('.form__btn'));
+                    console.log(src);
+                    download(encodeURIComponent(src), ('.form__btn'),'/down');
 
                 }
 

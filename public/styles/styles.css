@@ -1,4 +1,4 @@
-.form__input, .form__btn {
+.form__input, .form__btn, .download__choice a {
   display: block;
   border: none;
   border-radius: 50px;
@@ -7,6 +7,8 @@
 body {
   background-color: rgba(169, 238, 230, 0.8);
   margin: 0 auto; }
+  body a {
+    text-decoration: none; }
 
 .img__logo {
   display: block;
@@ -23,21 +25,22 @@ body {
 .form__input {
   height: 2.625rem;
   width: 18.25rem;
-  margin: 0 auto;
+  margin: 0 auto 1.75rem;
+  padding: 0 8px;
   text-align: center;
   color: #625772; }
   .form__input:invalid {
     border: 1.5px solid #F38181;
-    color: #F38181; }
+    color: #F38181;
+    margin-bottom: calc(1.75rem - 3px); }
 
 .form__btn {
   height: 3.125rem;
   width: 12.51rem;
-  margin: 1.75rem auto;
+  margin: 0 auto 1.75rem;
   background-color: #F38181;
   color: #FEFAEC;
   text-align: center;
-  text-decoration: none;
   line-height: 3.125rem;
   font-size: 1.125rem;
   display: block; }
@@ -47,3 +50,10 @@ body {
   margin: 1.75rem auto;
   justify-content: space-evenly;
   width: 18.25rem; }
+  .download__choice a {
+    background-color: #F38181;
+    color: #FEFAEC;
+    text-align: center;
+    line-height: 3.125rem;
+    font-size: 1.125rem;
+    width: 6rem; }
