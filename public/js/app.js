@@ -50,7 +50,7 @@ $(button).click(function(e){
                 }else{
                     let src = response.match(regex1)[1];
                     console.log(src);
-                    download(encodeURIComponent(src), ('.form__btn'),'/down');
+                    download(encodeURIComponent(src), ('.form__btn'),'save/down');
 
                 }
 
@@ -59,6 +59,7 @@ $(button).click(function(e){
         }
         
         else{               //the error message if link isn't valid
+            $(".form__input").val("")
             $(".form__input").addClass("animated flash");
             setTimeout(()=>{ 
             $("input").removeClass("animated flash");
