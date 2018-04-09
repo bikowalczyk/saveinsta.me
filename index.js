@@ -47,6 +47,6 @@ app.get('/', function(request, response) {
   response.sendFile(__dirname + '/public/index.html');
 })
 
-app.listen(app.get('port'), function() {
+app.listen(5000,'127.0.0.1', function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
