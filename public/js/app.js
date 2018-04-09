@@ -50,7 +50,7 @@ $(button).click(function(e){
                 }else{
                     let src = response.match(regex1)[1];
                     console.log(src);
-                    download(encodeURIComponent(src), ('.form__btn'),'save/down');
+                    download(encodeURIComponent(src), ('.form__btn'),'/down');
 
                 }
 
