@@ -2,56 +2,51 @@ $color-primary: rgba(169, 238, 230, 0.8);
 $color-dark: #625772;
 $color-secondary: #FEFAEC;
 $color-red: #F38181;
-
-%border{
+%border {
     display: block;
     border: none;
     border-radius: 50px;
     outline: none;
 }
 
-body{
-    background-color: $color-primary; 
+body {
+    background-color: $color-primary;
     margin: 0 auto;
-
-    a{
+    a {
         text-decoration: none;
     }
 }
 
-.img__logo{
+.img__logo {
     display: block;
     height: 8.25rem;
     width: 8.25rem;
     margin: 6.31rem auto 1rem;
 }
 
-.header__main--text{
+.header__main--text {
     font-family: Arial;
     color: $color-dark;
     font-size: 2.5rem;
     text-align: center;
 }
 
-.form{
-    &__input{
+.form {
+    &__input {
         @extend %border;
         height: 2.625rem;
         width: 18.25rem;
         margin: 0 auto 1.75rem;
         padding: 0 8px;
         text-align: center;
-        color: $color-dark;
-        // background-color: $color-secondary;
-        
-    &:invalid{
-        border: 1.5px solid $color-red;
-        color: $color-red;
-        margin-bottom: calc(1.75rem - 3px);
-        
+        color: $color-dark; // background-color: $color-secondary;
+        &:invalid {
+            border: 1.5px solid $color-red;
+            color: $color-red;
+            margin-bottom: calc(1.75rem - 3px);
+        }
     }
-    }
-    &__btn{
+    &__btn {
         @extend %border;
         height: 3.125rem;
         width: 12.51rem;
@@ -62,23 +57,21 @@ body{
         line-height: 3.125rem;
         font-size: 1.125rem;
         display: block;
-        
     }
 }
 
-.download__choice{
+.download__choice {
     display: none;
     margin: 1.75rem auto;
     justify-content: space-evenly;
     width: 18.25rem;
-
-a{
-    @extend %border;
-    background-color: $color-red;
-    color: $color-secondary;
-    text-align: center;
-    line-height: 3.125rem;
-    font-size: 1.125rem;
-    width: 6rem;
-}
+    a {
+        @extend %border;
+        background-color: $color-red;
+        color: $color-secondary;
+        text-align: center;
+        line-height: 3.125rem;
+        font-size: 1.125rem;
+        width: 6rem;
+    }
 }
