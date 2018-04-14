@@ -36,9 +36,11 @@ app.get('/gif', function (req, res) {
   const fileName = link.slice(-14);
   const r = request(link);
 
+  const gif = fs.createWriteStream(__dirname + '/downloads/' + fileName.slice(1, -4) + '.gif');
+
   r.on('response', (resp) => {
     const stream = resp.pipe(fs.createWriteStream(__dirname + '/downloads/' + fileName));
-    stream.on('finish', () => gifify(__dirname + '/downloads/' + fileName).pipe(__dirname + '/downloads/' + fileName.slice(1, -4) + '.gif'));
+    stream.on('finish', () => gifify(__dirname + '/downloads/' + fileName).pipe(gif));
   });
 
 })
