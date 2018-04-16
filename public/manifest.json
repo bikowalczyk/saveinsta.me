@@ -1,0 +1,25 @@
+{
+  "short_name": "SaveInsta",
+  "name": "SaveInsta.me",
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#B9F0EA",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "img/icons/1x.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "img/icons/2x.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "img/icons/4x.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}
