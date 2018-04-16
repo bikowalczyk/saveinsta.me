@@ -4,6 +4,9 @@
   border-radius: 50px;
   outline: none; }
 
+.wrapper {
+  margin-top: 20vh; }
+
 body {
   background-color: rgba(169, 238, 230, 0.8);
   margin: 0 auto; }
