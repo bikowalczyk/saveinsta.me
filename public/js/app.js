@@ -12,6 +12,7 @@ if ('serviceWorker' in navigator) {
     });
   }
 
+//APP
 
 const button = $('.form__btn');
 
@@ -26,10 +27,17 @@ $('.form__input').keypress(function (e) {
 function download(value, item, type) {
     $(item).attr('href', `${type}?url=${value}`);
     $(".form__input").val("");
-    // button[0].click();
-    // $(item).attr('href', "#");
-    $('.form__input').prop('disabled', false);
 
+    if(item = "#pic"){
+   setTimeout(() => {
+       button[0].click();
+       $('.form__input').prop('disabled', false);
+       button.attr("href", "#");
+   }, 500);
+
+   
+}
+    
 }
 
 $(button).click(function (e) {
@@ -65,7 +73,7 @@ $(button).click(function (e) {
                 } else {
                     let src = response.match(regex1)[1];
                     console.log(src);
-                    download(encodeURIComponent(src), ('.form__btn'), '/down');
+                    download(encodeURIComponent(src), ('#pic'), '/down');
 
                 }
 
