@@ -18,12 +18,6 @@ self.addEventListener('install', function(e) {
 });
 
 self.addEventListener("activate", function(e){
-    e.waitUntil(
-      caches.keys().then(function(names) {
-        for (let name of names)
-            caches.delete(name);
-    })
-    )
     console.log("[ServiceWorker] Activated");
 })
 
