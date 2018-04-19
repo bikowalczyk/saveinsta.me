@@ -13,8 +13,10 @@ $color-red: #F38181;
     margin-top: 20vh;
 }
 
+
 body {
     background-color: $color-primary;
+    position: relative;
     margin: 0 auto;
     a {
         text-decoration: none;

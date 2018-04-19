@@ -6,9 +6,9 @@ var urlsToCache = [
   'js/app.js'
 ];
 
-self.addEventListener('install', function(event) {
+self.addEventListener('install', function(e) {
   // Perform install steps
-  event.waitUntil(
+  e.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
         console.log('Opened cache');
@@ -18,6 +18,12 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener("activate", function(e){
+    e.waitUntil(
+      caches.keys().then(function(names) {
+        for (let name of names)
+            caches.delete(name);
+    })
+    )
     console.log("[ServiceWorker] Activated");
 })
 

@@ -9,6 +9,7 @@
 
 body {
   background-color: rgba(169, 238, 230, 0.8);
+  position: relative;
   margin: 0 auto; }
   body a {
     text-decoration: none; }

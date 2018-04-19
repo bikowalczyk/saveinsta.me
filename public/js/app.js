@@ -12,6 +12,15 @@ if ('serviceWorker' in navigator) {
     });
   }
 
+  //ALERT IF IOS
+  const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+  if(iOS){
+    alert("Dear User, \ndownloading clips on iOS device is currently unsupported, due to Apple's closed filesystem policy."+
+    "\nYou can still download pictures and use our app on PC/Android to download videos./nThank You");
+  }
+
+
 //APP
 
 const button = $('.form__btn');
