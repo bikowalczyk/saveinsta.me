@@ -17,7 +17,7 @@ if ('serviceWorker' in navigator) {
 
   if(iOS){
     alert("Dear User, \ndownloading clips on iOS device is currently unsupported, due to Apple's closed filesystem policy."+
-    "\nYou can still download pictures and use our app on PC/Android to download videos./nThank You");
+    "\nYou can still download pictures and use our app on PC/Android to download videos. /nThank You");
   }
 
 
@@ -76,7 +76,8 @@ $(button).click(function (e) {
                     });
                     //user chose gif
                     $('.download__choice-gif').click(() => {
-                        download(encodeURIComponent(src), ('#gif'), '/gif');
+                        alert("This feature is still under development");
+                        // download(encodeURIComponent(src), ('#gif'), '/gif');
                     });
 
                 } else {
