@@ -8,7 +8,7 @@
 <p>Instagram doesn’t allow their users to download a picture or video from their site directly. To achieve this users must use a 3rd party software.</p>
 <p>The problem with this is that there is a lot sites to choose from. Most of which is slow, filled with irritating ads, or doesn’t work at all!</p>
 <h4 id="sounds-scary-right-makes-you-want-to-quit-ig-at-all">Sounds scary right? Makes you want to quit IG at all!</h4>
-<p>Now you don’t need to get rid of your favorite social media app just yet! <strong>Just read to the end of this article to learn how to make the most of IG possible</strong></p>
+<p>Now you don’t need to get rid of your favorite social media app just yet! <strong>Just read and learn how to make the most of IG possible</strong></p>
 <h2 id="what-makes-saveinsta.me-the-best">What makes <a href="http://SaveInsta.me">SaveInsta.me</a> the best</h2>
 <ul>
 <li>Great intuitive design!
@@ -28,5 +28,12 @@
 </ul>
 </li>
 </ul>
-<h2 id="if-youd-like-to-know-how-the-app-works-behind-the-scenes-please-read-the-docs-below.">If you’d like to know how the app works behind the scenes please read the docs below.</h2>
+<h2 id="if-youd-like-to-know-how-the-app-works-please-read-the-docs-below.">If you’d like to know how the app works please read the docs below.</h2>
+<ol>
+<li>First the user has to copy a link directly from Instagram (it’s important to keep the https prefix).</li>
+<li>After hitting the download button, the app check if the link is correct.</li>
+<li>Then it downloads the html file (a site that user pasted) on client side and matches it against a regular expression.</li>
+<li>When the direct download link is found it is send to ExpressJs and downloaded right on the server.</li>
+<li>Later a user is prompted with a download and the file is safely deleted from the server.</li>
+</ol>
 

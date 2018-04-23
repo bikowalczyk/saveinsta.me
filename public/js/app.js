@@ -51,7 +51,6 @@ function download(value, item, type) {
 
 $(button).click(function (e) {
     let link = $(".form__input").val();
-    e.preventDefault();
 
 
     if (link.startsWith("https://www.instagram.com/p/") || link.startsWith("https://scontent")) {
