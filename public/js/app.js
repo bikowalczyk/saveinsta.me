@@ -41,7 +41,7 @@ function download(value, item, type) {
    setTimeout(() => {
        button[0].click();
        $('.form__input').prop('disabled', false);
-       button.attr("href", "#");
+       button.removeAttr("href");
    }, 500);
 
    
