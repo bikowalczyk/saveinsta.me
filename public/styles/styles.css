@@ -47,7 +47,8 @@ body {
   text-align: center;
   line-height: 3.125rem;
   font-size: 1.125rem;
-  display: block; }
+  display: block;
+  cursor: pointer; }
 
 .download__choice {
   display: none;
@@ -60,4 +61,5 @@ body {
     text-align: center;
     line-height: 3.125rem;
     font-size: 1.125rem;
-    width: 6rem; }
+    width: 6rem;
+    cursor: pointer; }
