@@ -8,7 +8,7 @@ var gifify = require('gifify');
 var path = require('path');
 
 app.set('port', (process.env.PORT || 5000))
-app.use(express.static(__dirname + '/public'))
+app.use('/saveinsta',express.static(__dirname + '/public'))
 
 app.get('/down', function (req, res) {
   const link = (JSON.stringify(req.query.url).slice(1, -1)); //direct mp4/jpg link
