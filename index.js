@@ -45,7 +45,7 @@ app.get('/gif', function (req, res) {
 
 })
 
-app.get('/', function (request, response) {
+app.get(function (request, response) {
   response.sendFile(__dirname + '/public/index.html');
 })
 
